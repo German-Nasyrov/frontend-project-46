@@ -9,9 +9,9 @@ const stringify = (value) => {
 };
 
 const makePlain = (diff) => {
-  const iter = (tree, parent) =>
-    tree.flatMap((node) => {
+  const iter = (tree, parent) => tree.flatMap((node) => {
       const path = [...parent, node.key].join('.');
+      
       switch (node.state) {
         case 'added':
           return `Property '${path}' was added with value: ${stringify(node.value)}`;

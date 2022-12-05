@@ -21,13 +21,11 @@ const sign = {
 };
 
 const makeStylish = (diff, replacer = '    ') => {
-  const iter = (tree, depth) =>
-    tree.map((node) => {
+  const iter = (tree, depth) => tree.map((node) => {
       const indent = replacer.repeat(depth);
       const indentForSign = indent.slice(2);
 
-      const makeLine = (value, mark) =>
-        `${indentForSign}${mark} ${node.key}: ${stringify(value, depth, replacer)}`;
+      const makeLine = (value, mark) => `${indentForSign}${mark} ${node.key}: ${stringify(value, depth, replacer)}`;
 
       switch (node.state) {
         case 'added':
