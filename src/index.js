@@ -1,15 +1,31 @@
-import { program } from 'commander';
+import fs from 'fs';
+import path from 'path';
+import makeTree from './makeTree.js';
+import parse from './parsers.js';
+import formatOutput from './formatters/index.js';
 
-program
-  .name('gendiff')
-  .description('Compares two configuration files and shows a difference.')
-  .version('0.1.0', '-V, --version', 'output the version number')
-  .option('-f, --format <type>', 'output format')
-  .arguments('<filepath1> <filepath2>')
-  .action((filepath1, filepath2) => {
-    const diff = gendiff(filepath1, filepath2);
-    console.log(diff);
-  })
-  .parse(process.argv);
+// eslint-disable-next-line no-undef
+const getAbsolutePath = (file) => path.resolve(process.cwd(), file);
+const getExtensions = (file) => path.extname(file).slice(1);
 
-export default program;
+const getContentFromFile = (file) => {
+  const absolutePath = getAbsolutePath(file);
+  const fileContent = fs.readFileSync(absolutePath, 'utf8');
+  const extension = getExtensions(file);
+  return parse(fileContent, extension);
+};
+
+const gendiff = (filePath1, filePath2, format = 'stylish') => {
+  const file1 = getContentFromFile(filePath1);
+  const file2 = getContentFromFile(filePath2);
+  const diffInfo = makeTree(file1, file2);
+  const formattedTree = formatOutput(diffInfo, format);
+
+  return formattedTree;
+};
+
+console.log(
+  JSON.stringify(gendiff('../__fixtures__/file1.json', '../__fixtures__/file2.json')),
+);
+
+export default gendiff;
