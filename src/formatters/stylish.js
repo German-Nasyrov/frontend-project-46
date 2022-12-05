@@ -26,7 +26,6 @@ const makeStylish = (diff, replacer = '    ') => {
     const indentForSign = indent.slice(2);
 
     const makeLine = (value, mark) => `${indentForSign}${mark} ${node.key}: ${stringify(value, depth, replacer)}`;
-
     switch (node.state) {
       case 'added':
         return makeLine(node.value, sign.added);
