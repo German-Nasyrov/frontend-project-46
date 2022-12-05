@@ -1,11 +1,9 @@
 ### Hexlet tests and linter status:
 
 [![Actions Status](https://github.com/OGGera/frontend-project-46/workflows/hexlet-check/badge.svg)](https://github.com/OGGera/frontend-project-46/actions)
-
-<a href="https://codeclimate.com/github/OGGera/frontend-project-46/maintainability"><img src="https://api.codeclimate.com/v1/badges/deb5d6dfacc757dbf0ea/maintainability" /></a>
-
-<a href="https://codeclimate.com/github/OGGera/frontend-project-46/test_coverage"><img src="https://api.codeclimate.com/v1/badges/deb5d6dfacc757dbf0ea/test_coverage" /></a>
-
+[![Maintainability](https://api.codeclimate.com/v1/badges/deb5d6dfacc757dbf0ea/maintainability)](https://codeclimate.com/github/OGGera/frontend-project-46/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/deb5d6dfacc757dbf0ea/test_coverage)](https://codeclimate.com/github/OGGera/frontend-project-46/test_coverage)
+![Node CI](https://github.com//OGGera/frontend-project-46/actions/workflows/nodejs.yml/badge.svg)
 ---
 
 ## Project "Difference calculator"
