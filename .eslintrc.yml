@@ -11,12 +11,11 @@ env:
 extends:
   - 'airbnb-base'
   - 'plugin:jest/recommended'
-  - 'prettier'
 
 overrides: []
 
 parserOptions:
-  ecmaVersion: 2020
+  ecmaVersion: 11
   sourceType: module
 
 rules:
