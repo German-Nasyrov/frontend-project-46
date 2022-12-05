@@ -13,15 +13,15 @@
 That programm generates difference between two files in in the following formats: JSON, YML, YAML.
 
 How to install:
-
+```shell
 $ make install
-
+```
 ---
 
 How to run tests:
-
+```shell
 $ make test
-
+```
 ---
 
 JSON files check:
