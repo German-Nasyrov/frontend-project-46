@@ -27,7 +27,7 @@ describe('Positives cases', () => {
 
 describe('Negative cases', () => {
   test('Check wrong file extension', () => {
-    const error = new Error("Invalid file extension: 'txt'! Try supported formats.");
+    const error = new Error("Wrong file extension: 'txt'! Try other formats.");
 
     expect(() => {
       gendiff(getFixturePath('file1-wrong.txt'), getFixturePath('file2-wrong.txt'));

@@ -29,13 +29,3 @@ const makeTree = (file1, file2) => {
 };
 
 export default makeTree;
-
-console.log(
-  _.sortBy(
-    _.union(_.keys('../__fixtures__/file1.json', _.keys('../__fixtures__/file2.json'))),
-  ),
-);
-
-console.log(
-  JSON.stringify(makeTree('../__fixtures__/file1.json', '../__fixtures__/file2.json')),
-);

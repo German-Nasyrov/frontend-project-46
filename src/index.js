@@ -24,8 +24,4 @@ const gendiff = (filePath1, filePath2, format = 'stylish') => {
   return formattedTree;
 };
 
-console.log(
-  JSON.stringify(gendiff('../__fixtures__/file1.json', '../__fixtures__/file2.json')),
-);
-
 export default gendiff;
