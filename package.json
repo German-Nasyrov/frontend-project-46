@@ -5,7 +5,7 @@
   "description": "[![Actions Status](https://github.com/OGGera/frontend-project-46/workflows/hexlet-check/badge.svg)](https://github.com/OGGera/frontend-project-46/actions)",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npx -n --experimental-vm-modules jest"
   },
   "repository": {
     "type": "git",
@@ -21,6 +21,19 @@
     "gendiff": "bin/gendiff.js"
   },
   "dependencies": {
-    "commander": "^9.4.1"
+    "commander": "^9.4.1",
+    "jest-cli": "^29.3.1",
+    "js-yaml": "^4.1.0",
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "eslint": "^8.28.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jest": "^27.1.6",
+    "jest": "^29.3.1",
+    "jest-cli": "^29.3.1",
+    "jest-circus": "^29.3.1"
   }
 }
