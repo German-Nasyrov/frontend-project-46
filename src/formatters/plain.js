@@ -19,9 +19,7 @@ const makePlain = (diff) => {
       case 'notChanged':
         return [];
       case 'changed':
-        return `Property '${path}' was updated. From ${stringify(
-          node.value1,
-        )} to ${stringify(node.value2)}`;
+        return `Property '${path}' was updated. From ${stringify(node.value1)} to ${stringify(node.value2)}`;
       case 'nested':
         return `${iter(node.value, [path]).join('\n')}`;
       default:

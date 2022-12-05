@@ -36,14 +36,9 @@ const makeStylish = (diff, replacer = '    ') => {
       case 'changed':
         return [
           `${makeLine(node.value1, sign.deleted)}`,
-          `${makeLine(node.value2, sign.added)}`,
-        ].join('\n');
+          `${makeLine(node.value2, sign.added)}`].join('\n');
       case 'nested':
-        return `${indent}${node.key}: ${[
-          '{',
-          ...iter(node.value, depth + 1),
-          `${indent}}`,
-        ].join('\n')}`;
+        return `${indent}${node.key}: ${['{', ...iter(node.value, depth + 1), `${indent}}`].join('\n')}`;
       default:
         throw new Error(`Type: ${node.state} is undefined`);
     }
