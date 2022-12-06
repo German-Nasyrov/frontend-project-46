@@ -8,8 +8,6 @@
 
 ## Project "Difference calculator"
 
-### Project description:
-
 That programm generates difference between two files in in the following formats: JSON, YML, YAML.
 
 How to install:
