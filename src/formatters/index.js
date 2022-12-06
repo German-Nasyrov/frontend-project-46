@@ -11,6 +11,6 @@ export default (data, format, replacer) => {
     case 'json':
       return makeJson(data, null, replacer);
     default:
-      return 0;
+      throw new Error(`Wrong file format type: '.${format}'! Try other file formats.`);
   }
 };
