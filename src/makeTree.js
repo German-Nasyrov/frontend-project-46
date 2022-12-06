@@ -17,10 +17,7 @@ const makeTree = (file1, file2) => {
     }
     if (!_.isEqual(file1[key], file2[key])) {
       return {
-        key,
-        state: 'changed',
-        value1: file1[key],
-        value2: file2[key],
+        key, state: 'changed', value1: file1[key], value2: file2[key],
       };
     }
 

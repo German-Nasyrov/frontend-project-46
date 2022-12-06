@@ -12,6 +12,7 @@ const getContentFromFile = (file) => {
   const absolutePath = getAbsolutePath(file);
   const fileContent = fs.readFileSync(absolutePath, 'utf8');
   const extension = getExtensions(file);
+
   return parse(fileContent, extension);
 };
 
