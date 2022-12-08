@@ -10,6 +10,10 @@
 
 That programm generates difference between two files in in the following formats: JSON, YML, YAML.
 
+System requirements:
+1) You must have Node.js no lower version 12: node -v .
+2) You must have npm no lower version 5: npm -v
+
 How to install:
 ```shell
 $ make install
@@ -28,7 +32,7 @@ JSON files check:
 
 Attached JSON files check:
 
-[![asciicast](https://asciinema.org/a/qY7fTRQohgqbEJG5vrnewZb3h.svg)](https://asciinema.org/a/qY7fTRQohgqbEJG5vrnewZb3h)
+[![asciicast](https://asciinema.org/a/mfw2wCvdEL3rDbmg8FclDY2B9.svg)](https://asciinema.org/a/mfw2wCvdEL3rDbmg8FclDY2B9)
 
 YML and YAML files check:
 
@@ -36,8 +40,8 @@ YML and YAML files check:
 
 Plain format check:
 
-[![asciicast](https://asciinema.org/a/4EuOWUGgbhv3lclamXZHx0JL3.svg)](https://asciinema.org/a/4EuOWUGgbhv3lclamXZHx0JL3)
+[![asciicast](https://asciinema.org/a/9iObRgvMonRK3tq12hUjIImsv.svg)](https://asciinema.org/a/9iObRgvMonRK3tq12hUjIImsv)
 
 Output in JSON format check:
 
-[![asciicast](https://asciinema.org/a/I93uiB7TOYXPHt8jk7yiGPELd.svg)](https://asciinema.org/a/I93uiB7TOYXPHt8jk7yiGPELd)
+[![asciicast](https://asciinema.org/a/SZXelGywERNDZN8k5n4HO7Jbl.svg)](https://asciinema.org/a/SZXelGywERNDZN8k5n4HO7Jbl)
