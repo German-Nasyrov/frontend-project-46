@@ -11,7 +11,7 @@ const stringify = (value) => {
 const makePlain = (diff) => {
   const iter = (tree, parent) => tree.flatMap((node) => {
     const path = [...parent, node.key].join('.');
-    switch (node.state) {
+    switch (node.type) {
       case 'added':
         return `Property '${path}' was added with value: ${stringify(node.value)}`;
       case 'deleted':
@@ -19,11 +19,13 @@ const makePlain = (diff) => {
       case 'notChanged':
         return [];
       case 'changed':
-        return `Property '${path}' was updated. From ${stringify(node.value1)} to ${stringify(node.value2)}`;
+        return `Property '${path}' was updated. From ${stringify(
+          node.value1,
+        )} to ${stringify(node.value2)}`;
       case 'nested':
-        return `${iter(node.value, [path]).join('\n')}`;
+        return `${iter(node.children, [path]).join('\n')}`;
       default:
-        throw new Error(`Type: ${node.state} is undefined`);
+        throw new Error(`Type: ${node.type} is undefined`);
     }
   });
 
