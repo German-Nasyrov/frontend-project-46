@@ -8,7 +8,7 @@ gendiff:
 publish:
 	npm publish --dry-run
 
-lint:	
+lint:
 	npx eslint .
 
 test:
@@ -17,5 +17,5 @@ test:
 test-watch:
 	npm test -s -- --watch
 
-test-coverage: # Run coverage tests
+test-coverage:
 	npm test -- --coverage --coverageProvider=v8
