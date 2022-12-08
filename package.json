@@ -2,7 +2,7 @@
   "name": "@hexlet/code",
   "version": "1.0.0",
   "type": "module",
-  "description": "[![Actions Status](https://github.com/OGGera/frontend-project-46/workflows/hexlet-check/badge.svg)](https://github.com/OGGera/frontend-project-46/actions)",
+  "description": "That programm generates difference between two files in in the following formats: JSON, YML, YAML.",
   "main": "index.js",
   "scripts": {
     "test": "npx -n --experimental-vm-modules jest"
@@ -17,12 +17,15 @@
     "url": "https://github.com/OGGera/frontend-project-46/issues"
   },
   "homepage": "https://github.com/OGGera/frontend-project-46#readme",
+  "engines": {
+    "node": ">=12.0.0",
+    "npm": ">=5.0.0"
+  },
   "bin": {
     "gendiff": "bin/gendiff.js"
   },
   "dependencies": {
     "commander": "^9.4.1",
-    "jest-cli": "^29.3.1",
     "js-yaml": "^4.1.0",
     "lodash": "^4.17.21"
   },
