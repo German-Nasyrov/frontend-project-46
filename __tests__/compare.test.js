@@ -12,16 +12,22 @@ const expectedStylish = readFile('correct-stylish.txt');
 const expectedPlain = readFile('correct-plain.txt');
 const expectedJson = readFile('correct-json.txt');
 
-const extensions = ['json', 'yaml', 'yml'];
+const formats = ['json', 'yaml', 'yml'];
 
 describe('Positives cases', () => {
-  test.each(extensions)('Format %s', (extension) => {
-    const file1 = `${process.cwd()}/__fixtures__/file1.${extension}`;
-    const file2 = `${process.cwd()}/__fixtures__/file2.${extension}`;
+  describe.each(formats)('Format %s', (format) => {
+    const file1 = `${process.cwd()}/__fixtures__/file1.${format}`;
+    const file2 = `${process.cwd()}/__fixtures__/file2.${format}`;
 
-    expect(gendiff(file1, file2, 'stylish')).toEqual(expectedStylish);
-    expect(gendiff(file1, file2, 'plain')).toEqual(expectedPlain);
-    expect(gendiff(file1, file2, 'json')).toEqual(expectedJson);
+    test('Correct stylish', () => {
+      expect(gendiff(file1, file2, 'stylish')).toEqual(expectedStylish);
+    });
+    test('Correct plain', () => {
+      expect(gendiff(file1, file2, 'plain')).toEqual(expectedPlain);
+    });
+    test('Correct json', () => {
+      expect(gendiff(file1, file2, 'json')).toEqual(expectedJson);
+    });
   });
 });
 
