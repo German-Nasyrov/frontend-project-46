@@ -1,9 +1,9 @@
 ### Hexlet tests and linter status:
 
-[![Actions Status](https://github.com/OGGera/frontend-project-46/workflows/hexlet-check/badge.svg)](https://github.com/OGGera/frontend-project-46/actions)
-[![Maintainability](https://api.codeclimate.com/v1/badges/deb5d6dfacc757dbf0ea/maintainability)](https://codeclimate.com/github/OGGera/frontend-project-46/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/deb5d6dfacc757dbf0ea/test_coverage)](https://codeclimate.com/github/OGGera/frontend-project-46/test_coverage)
-![Node CI](https://github.com//OGGera/frontend-project-46/actions/workflows/nodejs.yml/badge.svg)
+[![Actions Status](https://github.com/German-Nasyrov/frontend-project-46/workflows/hexlet-check/badge.svg)](https://github.com/German-Nasyrov/frontend-project-46/actions)
+[![Maintainability](https://api.codeclimate.com/v1/badges/deb5d6dfacc757dbf0ea/maintainability)](https://codeclimate.com/github/German-Nasyrov/frontend-project-46/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/deb5d6dfacc757dbf0ea/test_coverage)](https://codeclimate.com/github/German-Nasyrov/frontend-project-46/test_coverage)
+![Node CI](https://github.com//German-Nasyrov/frontend-project-46/actions/workflows/nodejs.yml/badge.svg)
 ---
 
 ## Project "Difference calculator"
